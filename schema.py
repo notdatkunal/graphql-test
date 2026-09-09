@@ -92,7 +92,9 @@ class Employee:
     lastName: str
     email: str
     department: str
-    salary: float = strawberry.field(permission_classes=[IsAdminOrHR])
+    salary: float | None = strawberry.field(
+        permission_classes=[IsAdminOrHR]
+    )
     hiredAt: str
     orgId: int | None
 
