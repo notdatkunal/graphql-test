@@ -1,0 +1,78 @@
+{
+  "realm": "graphql-demo",
+  "enabled": true,
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "duplicateEmailsAllowed": false,
+  "resetPasswordAllowed": false,
+  "roles": {
+    "realm": [
+      { "name": "ADMIN" },
+      { "name": "HR" },
+      { "name": "MEMBER" }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "graphql-app",
+      "name": "GraphQL App",
+      "enabled": true,
+      "publicClient": true,
+      "standardFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "protocol": "openid-connect",
+      "redirectUris": ["/*"],
+      "webOrigins": []
+    }
+  ],
+  "users": [
+    {
+      "username": "admin",
+      "firstName": "Adam",
+      "lastName": "Admin",
+      "email": "admin@example.com",
+      "emailVerified": true,
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "admin123",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["ADMIN"]
+    },
+    {
+      "username": "hr",
+      "firstName": "Hana",
+      "lastName": "Hr",
+      "email": "hr@example.com",
+      "emailVerified": true,
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "hr123",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["HR"]
+    },
+    {
+      "username": "member",
+      "firstName": "Mona",
+      "lastName": "Member",
+      "email": "member@example.com",
+      "emailVerified": true,
+      "enabled": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "member123",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["MEMBER"]
+    }
+  ]
+}
